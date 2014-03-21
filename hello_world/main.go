@@ -11,7 +11,7 @@ func main() {
 		return "hello world!"
 	})
 	m.Get("/hello/:name", func(params martini.Params) string {
-		return "hello" + params["name"]
+		return "hello " + params["name"]
 	})
 
 	m.Run()
