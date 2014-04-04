@@ -4,8 +4,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/codegangsta/martini"
 	"github.com/cznic/kv"
+	"github.com/go-martini/martini"
 	"github.com/martini-contrib/binding"
 	"github.com/martini-contrib/render"
 	"io"
