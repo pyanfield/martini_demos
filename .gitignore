@@ -24,3 +24,6 @@ _testmain.go
 
 gin-bin
 .DS_Store
+
+key.pem
+cert.pem

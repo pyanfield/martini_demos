@@ -3,9 +3,12 @@
 ### run the server
 
 	go run api.go data.go errors.go server.go encoding.go
-	
 
-### The `-k` option is required if you use a self-signed certificate. The `-u` option specifies the user:password, which in our case is simply token: (empty password). The `-i` option prints the whole response, including headers.
+### create certificate files
+
+	go run /path/to/goroot/src/pkg/crypto/tls/generate_cert.go --host="localhost"
+
+#### The `-k` option is required if you use a self-signed certificate. The `-u` option specifies the user:password, which in our case is simply token: (empty password). The `-i` option prints the whole response, including headers.
 
 ### get all albums
 
