@@ -72,13 +72,16 @@ func MapEncoder(c martini.Context, w http.ResponseWriter, r *http.Request) {
 	// meaning that the dependency is scoped to this particular request.
 	switch ft {
 	case ".xml":
-		c.MapTo(xmlEncoder{}, (*Encoder)(nil))
+		// c.MapTo(xmlEncoder{}, (*Encoder)(nil))
+		c.Map(xmlEncoder)
 		w.Header().Set("Content-Type", "application/xml")
 	case ".text":
-		c.MapTo(textEncoder{}, (*Encoder)(nil))
+		// c.MapTo(textEncoder{}, (*Encoder)(nil))
+		c.Map(textEncoder)
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 	default:
-		c.MapTo(jsonEncoder{}, (*Encoder)(nil))
+		// c.MapTo(jsonEncoder{}, (*Encoder)(nil))
+		c.Map(jsonEncoder)
 		w.Header().Set("Content-Type", "application/json")
 	}
 }

@@ -2,7 +2,7 @@
 
 ### run the server
 
-	go run api.go data.go errors.go server.go encoding.go
+	go run api.go data.go errors.go encoding.go server.go
 
 ### create certificate files
 
